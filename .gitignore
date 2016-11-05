@@ -1,6 +1,7 @@
 *.class
 .project
 bin/
+DiscordMain.java
 .classpath
 .metadata
 # Mobile Tools for Java (J2ME)
