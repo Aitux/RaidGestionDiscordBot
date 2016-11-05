@@ -11,6 +11,7 @@ public class DiscordMain {
 	public static void main(String[] args) {
 		Properties prop = new Properties();
 		File f = new File("C:\\Users\\simon\\Documents\\propertiesRaid.txt");
+		
 		try {
 			FileInputStream fl = new FileInputStream(f);
 			prop.load(fl);
@@ -21,8 +22,10 @@ public class DiscordMain {
 		
 		try{
 			final JDA jda = new JDABuilder().setBotToken(prop.getProperty("token")).setBulkDeleteSplittingEnabled(false).buildBlocking();
+			jda.addEventListener(new DiscordMessageListener());
 		}catch(Exception e){
 			System.exit(0);
 		}
 	}
 }
+	
