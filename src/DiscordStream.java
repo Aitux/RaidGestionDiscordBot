@@ -1,7 +1,7 @@
 import java.io.PrintStream;
 
-import net.dv8tion.jda.entities.PrivateChannel;
-import net.dv8tion.jda.entities.TextChannel;
+import net.dv8tion.jda.core.entities.PrivateChannel;
+import net.dv8tion.jda.core.entities.TextChannel;
 
 public class DiscordStream {
 	private TextChannel channel;

@@ -3,8 +3,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-import net.dv8tion.jda.JDA;
-import net.dv8tion.jda.JDABuilder;
+import net.dv8tion.jda.core.AccountType;
+import net.dv8tion.jda.core.JDA;
+import net.dv8tion.jda.core.JDABuilder;
 
 public class DiscordMain {
 
@@ -21,7 +22,7 @@ public class DiscordMain {
 		}
 		
 		try{
-			final JDA jda = new JDABuilder().setBotToken(prop.getProperty("token")).setBulkDeleteSplittingEnabled(false).buildBlocking();
+			final JDA jda = new JDABuilder(AccountType.BOT).setToken(prop.getProperty("token")).setBulkDeleteSplittingEnabled(false).buildBlocking();
 			jda.addEventListener(new DiscordMessageListener());
 		}catch(Exception e){
 			System.exit(0);
