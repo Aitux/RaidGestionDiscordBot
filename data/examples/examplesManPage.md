@@ -13,12 +13,14 @@ C'est ici que vous devrez ajouter les précisions à la description si besoin il
 <!-- Nième + 1 partie: La Syntaxe -->
 __Syntax :__ 
 Ici vous expliquerez en ligne de code comment utiliser la commande.
-En rappel: pour faire apparaitre des lignes de code sur Discord il suffit que votre message commence par 3 backquotes et finissent par 3 backquotes. De cette façon: ``` blablabla ```
-```!syntaxDeMaCommande```
+En rappel: pour faire apparaitre des lignes de code sur Discord il suffit que votre message commence par 3 backquotes et finissent par 3 backquotes. De cette façon: 
+``` blablabla ```
+``` !syntaxDeMaCommande ```
+
 <!-- Nième + 2 partie: Exemples -->
 __Examples :__
 Surement la partie la plus importante. C'est ici que vous donnerez un ou plusieurs exemples concret de comment utiliser la commande. Toujours dans un bloc de code.
-```!MaCommande NomDuLeader NomD'UnDPS NomD'UnHeal```
+``` !MaCommande NomDuLeader NomD'UnDPS NomD'UnHeal ```
 <!-- Et enfin la dernière partie: Les Auteurs-->
 __Authors :__
 C'est ici que vous laissez vos contacts si quelqu'un pouvait avoir l'utilité de vous contacter pour vous rapportez un bug ou quoi que ce soit d'autre si besoin !
