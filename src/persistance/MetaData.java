@@ -15,7 +15,8 @@ public class MetaData
 	public static final String PRB_MSG_STRT = "Looks like there is a problem ! :innocent:\n";
 	public static final int MAX_MSG_SIZE = 2000;
 	private AudioChannel raid;
-	private List<String> commandName;	
+	private List<String> commandName;
+	private String pathToCommand = "";
 	
 	/** Constructeur privé */
 	private MetaData()
@@ -35,8 +36,9 @@ public class MetaData
 		return INSTANCE;
 	}
 	
-	public void setup(List<String> commandName){
+	public void setup(List<String> commandName, String path){
 		this.commandName = commandName;
+		this.pathToCommand = path;
 	}
 
 	public AudioChannel getRaid() {
@@ -49,5 +51,9 @@ public class MetaData
 
 	public void setRaid(AudioChannel raid) {
 		this.raid = raid;
+	}
+
+	public String getPathToCommand() {
+		return pathToCommand;
 	}
 }
