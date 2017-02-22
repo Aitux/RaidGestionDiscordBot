@@ -1,4 +1,12 @@
 package discordInteraction;
+
+/**
+* @author Simon "Aitux" Vandeputte
+*
+* @version v0.15
+*
+* Date: 22 févr. 2017
+*/
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -12,6 +20,7 @@ import command.GetRaidChannel;
 import command.Help;
 import command.ICommand;
 import command.Man;
+import command.SetRaidLeader;
 import net.dv8tion.jda.core.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 import persistance.MetaData;
@@ -32,13 +41,13 @@ public class DiscordMessageListener extends ListenerAdapter {
 		if (!commandsetup) {
 			setup(e);
 			md.setup(command, chemin);
-			
+
 		}
 		if (!e.getAuthor().isBot()) {
-			if(req.startsWith("!help")){
+			if (req.startsWith("!help")) {
 				new Help(e).execute();
 			}
-			
+
 			if (req.startsWith("!man")) {
 				new Man(e, req).execute();
 			}
@@ -48,13 +57,13 @@ public class DiscordMessageListener extends ListenerAdapter {
 			if (req.startsWith("!getRaidChannel")) {
 				new GetRaidChannel(e).execute();
 			}
-			if(req.startsWith("!setRaidLeader")){
-				
+			if (req.startsWith("!setRaidLeader")) {
+				new SetRaidLeader(e, req).execute();
 			}
 		}
 
 	}
-	
+
 	void setup(GuildMessageReceivedEvent e) {
 		command = new ArrayList<>();
 		File config = new File("config.ini");
@@ -84,6 +93,5 @@ public class DiscordMessageListener extends ListenerAdapter {
 		this.commandsetup = true;
 		this.chemin = chemin;
 	}
-
 
 }

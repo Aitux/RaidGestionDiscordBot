@@ -1,4 +1,5 @@
 package command;
+
 /**
 * @author Simon "Aitux" Vandeputte
 *
@@ -25,9 +26,8 @@ public class SetRaidHere extends ICommand {
 					.queue();
 		} else {
 			md.setRaid(set);
-			out.sendMessage(
-					"Raid's channel set to: " + this.event.getGuild().getVoiceChannelById(md.getRaid().getId()).getName())
-					.queue();
+			out.sendMessage("Raid's channel set to: "
+					+ this.event.getGuild().getVoiceChannelById(md.getRaid().getId()).getName()).queue();
 		}
 	}
 

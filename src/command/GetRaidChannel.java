@@ -1,4 +1,5 @@
 package command;
+
 /**
 * @author Simon "Aitux" Vandeputte
 *
@@ -8,7 +9,7 @@ package command;
 */
 import net.dv8tion.jda.core.events.message.guild.GuildMessageReceivedEvent;
 
-public class GetRaidChannel extends ICommand{
+public class GetRaidChannel extends ICommand {
 
 	public GetRaidChannel(GuildMessageReceivedEvent e) {
 		super(e);
@@ -16,7 +17,7 @@ public class GetRaidChannel extends ICommand{
 
 	@Override
 	public void execute() {
-		if (md.getRaid()!= null) {
+		if (md.getRaid() != null) {
 			out.sendMessage(
 					"Raid's channel is: " + event.getGuild().getVoiceChannelById(md.getRaid().getId()).getName())
 					.queue();

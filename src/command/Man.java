@@ -1,5 +1,11 @@
 package command;
-
+/**
+* @author Simon "Aitux" Vandeputte
+*
+* @version v0.5
+*
+* Date: 22 févr. 2017
+*/
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
