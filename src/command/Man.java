@@ -29,7 +29,7 @@ public class Man extends ICommand{
 		}
 
 //		System.out.println(md.getPathToCommand());
-		File manpage = new File(md.getPathToCommand()+"/" + part[1] + ".md");
+		File manpage = new File(md.getPathToCommand() + part[1] + ".md");
 		if (manpage.exists()) {
 			try {
 				BufferedReader bfR = new BufferedReader(new FileReader(manpage));
